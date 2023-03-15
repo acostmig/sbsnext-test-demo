@@ -22,7 +22,9 @@ namespace SBSNext.Test.demo.StepDefinitions
         [Given(@"user landed in SBSNext\.com")]
         public async Task GivenUserLandedInSBSNext_Com()
         {
-            await this.Page.GotoAsync("https://sbsnext.com", new PageGotoOptions { Timeout=60000});
+            var host = Environment.GetEnvironmentVariable("HOST")?? throw new NullReferenceException("HOST variable was not provided");
+            if(this.Page.Url!= $"{host}/landing")
+                await this.Page.GotoAsync(host, new PageGotoOptions { Timeout=60000});
         }
 
 
@@ -39,7 +41,6 @@ namespace SBSNext.Test.demo.StepDefinitions
         [When(@"user clicks on ""([^""]*)""")]
         public async Task WhenUserClicksOn(string identifier)
         {
-            Thread.Sleep(5000);
             await this.Page.GetField(identifier).ClickAsync();
         }
 

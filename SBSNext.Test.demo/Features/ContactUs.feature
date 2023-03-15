@@ -2,8 +2,8 @@
 
 Scenario: User can submit contact us form
 	Given user landed in SBSNext.com
-	When user clicks on "Contact Us"
-	And user enters the following field values
+	And contact us modal is open and empty
+	When user enters the following field values
 	| FieldName | Value                         |
 	| Name      | Miguel                        |
 	| Email     | miguel@sbsnext.com            |
@@ -15,8 +15,8 @@ Scenario: User can submit contact us form
 
 Scenario: User validations
 	Given user landed in SBSNext.com
-	When user clicks on "Contact Us"
-	And user enters the following field values
+	And contact us modal is open and empty
+	When user enters the following field values
 	| FieldName   | Value   |
 	| <FieldName> | <Value> |
 	When user clicks on "submit"

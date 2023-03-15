@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<RunConfiguration>
+		<EnvironmentVariables>
+			<HOST>https://SBSNext.com</HOST>
+			<SERVER_HOST>https://SBSNext.com/api</SERVER_HOST>
+			<BROWSER>Chrome</BROWSER>
+		</EnvironmentVariables>
+	</RunConfiguration>
+</RunSettings>
